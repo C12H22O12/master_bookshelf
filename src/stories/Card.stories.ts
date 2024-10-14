@@ -1,10 +1,10 @@
-import { DownloadButton } from "@/component";
+import { ExpandCard } from "@/component";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 const meta = {
-  title: "Example/Button",
-  component: DownloadButton,
+  title: "Example/Card",
+  component: ExpandCard,
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
@@ -12,9 +12,9 @@ const meta = {
   args: {
     Expand: fn(),
   },
-} satisfies Meta<typeof DownloadButton>;
+} satisfies Meta<typeof ExpandCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Download: Story = {};
+export const Expand: Story = {};

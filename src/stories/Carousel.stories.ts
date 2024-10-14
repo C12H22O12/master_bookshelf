@@ -1,10 +1,10 @@
-import { DownloadButton } from "@/component";
+import { Carousel } from "@/component";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 const meta = {
-  title: "Example/Button",
-  component: DownloadButton,
+  title: "Example/Carousel",
+  component: Carousel,
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
@@ -12,7 +12,7 @@ const meta = {
   args: {
     Expand: fn(),
   },
-} satisfies Meta<typeof DownloadButton>;
+} satisfies Meta<typeof Carousel>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
