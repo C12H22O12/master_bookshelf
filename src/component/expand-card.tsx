@@ -1,3 +1,3 @@
 export const ExpandCard = (): JSX.Element => {
-  return <>Card</>;
+  return <div className="bg-black">Expand Card</div>;
 };

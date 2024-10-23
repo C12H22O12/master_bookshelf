@@ -1,10 +1,10 @@
-import { ExpandCard } from "@/component";
+import { DefaultCard } from "@/component";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 const meta = {
   title: "Example/Card",
-  component: ExpandCard,
+  component: DefaultCard,
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
@@ -12,7 +12,7 @@ const meta = {
   args: {
     Expand: fn(),
   },
-} satisfies Meta<typeof ExpandCard>;
+} satisfies Meta<typeof DefaultCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
