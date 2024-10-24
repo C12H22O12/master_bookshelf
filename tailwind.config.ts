@@ -9,6 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      width: {
+        "4/5dvw": "40dvw",
+      },
+      height: {
+        "4/5dvh": "80dvh",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

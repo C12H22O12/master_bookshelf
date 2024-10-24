@@ -51,6 +51,7 @@ export const Carousel = (): JSX.Element => {
           }}
           data-index={idx}
           onClick={() => handleCardClick(idx)}
+          className="w-fit"
         >
           <DefaultCard isVisible={visiable.includes(idx)}>
             {idx + 1} card
