@@ -22,6 +22,7 @@ const config: Config = {
         default: "var(--background)",
         board: "var(--boardbg)",
         point: "var(--point)",
+        hover: "var(--hover)",
       },
       textColor: {
         title: "var(--title)",
