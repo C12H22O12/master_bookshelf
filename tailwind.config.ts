@@ -16,16 +16,18 @@ const config: Config = {
       },
       height: {
         "4/5dvh": "80dvh",
-        "button": "43px",
+        button: "43px",
       },
-      colors: {
-        background: "var(--background)",
+      backgroundColor: {
+        default: "var(--background)",
+        board: "var(--boardbg)",
+        point: "var(--point)",
+      },
+      textColor: {
         title: "var(--title)",
         content: "var(--content)",
-        button: "var(--button-content)",
-        point: "var(--point)",
-        boardbg: "var(--boardbg)",
-        boardct: "var(--boardct)",
+        button: "var(--button)",
+        board: "var(--boardct)",
       },
     },
   },
