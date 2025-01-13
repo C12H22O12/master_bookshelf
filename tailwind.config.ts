@@ -10,12 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       width: {
-        "4/5dvw": "40dvw",
+        "max-card": "267px",
         "m-button": "283px",
         "p-button": "253px",
       },
       height: {
-        "4/5dvh": "80dvh",
+        "max-card": "620px",
         button: "43px",
       },
       backgroundColor: {

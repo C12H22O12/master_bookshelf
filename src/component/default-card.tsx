@@ -1,20 +1,28 @@
-import { PropsWithChildren } from "react";
+import Image from "next/image";
 
-interface DefaultCardProps extends PropsWithChildren {
+interface DefaultCardProps {
   isVisible: boolean;
+  name: string;
 }
 
 export const DefaultCard = ({
   isVisible,
-  children,
+  name,
 }: DefaultCardProps): JSX.Element => {
   return (
     <div
-      className={`p-4 w-4/5dvw h-4/5dvh rounded-xl flex items-center space-x-4 border  transition-all ${
+      className={`w-max-card h-max-card flex flex-col items-center transition-all ${
         isVisible ? "bg-green-500" : "bg-red-500"
       }`}
     >
-      {children}
+      <Image
+        src={"/frame.png"}
+        width={267}
+        height={620}
+        alt="책가도 틀"
+        className="w-100"
+      />
+      <div>{name}</div>
     </div>
   );
 };

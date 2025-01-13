@@ -42,7 +42,7 @@ export const Carousel = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="w-full flex gap-4 overflow-auto">
+    <div className="w-full flex gap-2 overflow-auto">
       {Array.from(Array(8), (_, idx) => (
         <div
           key={`default_card_carousel_${idx}`}
@@ -53,9 +53,10 @@ export const Carousel = (): JSX.Element => {
           onClick={() => handleCardClick(idx)}
           className="w-fit"
         >
-          <DefaultCard isVisible={visiable.includes(idx)}>
-            {idx + 1} card
-          </DefaultCard>
+          <DefaultCard
+            isVisible={visiable.includes(idx)}
+            name={`${idx + 1} card`}
+          />
         </div>
       ))}
     </div>
