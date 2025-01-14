@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import data from "/public/sample/data.json";
 import { Card } from "./Card";
-
-type CardInfo = { id: number; title: string; imgSrc: string };
+import { CardInfo, SHELFS } from "@/constant/data";
 
 const Carousel = (): JSX.Element => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,7 +28,6 @@ const Carousel = (): JSX.Element => {
 
     calculatePadding();
     window.addEventListener("resize", calculatePadding);
-
 
     // 카드의 모든 부분이 보이는 지 유무를 판단하기 위함
     const observer = new IntersectionObserver(
@@ -67,7 +64,7 @@ const Carousel = (): JSX.Element => {
       className="relative w-full h-full px-8 flex gap-1 snap-proximity snap-x overflow-auto"
       style={{ paddingInline: `${sidePadding}px` }}
     >
-      {(data as CardInfo[]).map((d: CardInfo, idx: number) => (
+      {SHELFS.map((d: CardInfo, idx: number) => (
         <div
           key={d.id}
           ref={(el) => {
@@ -78,9 +75,10 @@ const Carousel = (): JSX.Element => {
           className={`w-fit h-full snap-center shrink-0`}
         >
           <Card
+            idx={idx}
             isVisible={visiable.includes(idx)}
             imgSrc={d.imgSrc}
-            name={d.title}
+            name={d.artist}
           />
         </div>
       ))}

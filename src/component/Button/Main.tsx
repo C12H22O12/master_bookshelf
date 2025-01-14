@@ -17,7 +17,7 @@ const Main = () => {
   };
 
   return (
-    <div className="flex max-md:flex-col gap-3 max-md:pt-3">
+    <div className="flex max-lg:flex-col gap-3 max-lg:pt-3">
       <B.Default handler={download} text="책가도 다운로드" />
       <B.Default handler={moveTo} text="작가님 사이트로 이동" />
     </div>
