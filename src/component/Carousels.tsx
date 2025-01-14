@@ -45,7 +45,7 @@ const Carousel = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="w-fit px-8 h-4/5 flex gap-1 overflow-auto">
+    <div className="relative w-full h-full flex gap-1 snap-proximity snap-x overflow-auto">
       {(data as CardInfo[]).map((d: CardInfo, idx: number) => (
         <div
           key={d.id}
@@ -54,7 +54,11 @@ const Carousel = (): JSX.Element => {
           }}
           data-index={idx}
           onClick={() => handleCardClick(idx)}
-          className="w-fit h-full "
+          className={`w-fit h-full snap-center shrink-0 ${
+            idx > 0 && idx < (data as CardInfo[]).length - 1
+              ? "first:pl-8 last:pr-8"
+              : null
+          }`}
         >
           <Card
             isVisible={visiable.includes(idx)}

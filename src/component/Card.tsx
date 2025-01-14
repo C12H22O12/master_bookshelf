@@ -6,11 +6,7 @@ interface CardProps {
   name: string;
 }
 
-export const Card = ({
-  isVisible,
-  imgSrc,
-  name,
-}: CardProps): JSX.Element => {
+export const Card = ({ isVisible, imgSrc, name }: CardProps): JSX.Element => {
   return (
     <div
       className={`flex flex-col items-center w-auto h-full aspect-[267/620] transition-all cursor-pointer ${
@@ -32,8 +28,8 @@ export const Card = ({
           }}
         />
       </div>
-      <div className="text-center">
-        {name} <br className="max-md:hidden" /> 책가도
+      <div className="pt-2 text-center">
+        {name} <br className="max-lg:hidden" /> 책가도
       </div>
     </div>
   );

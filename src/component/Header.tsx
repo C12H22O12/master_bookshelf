@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between md:justify-start w-100 h-header bg-point">
+    <div className="flex items-center justify-between md:justify-start w-full h-header bg-point">
       <Image
         src="/danchung.png"
         alt="단청 이미지"

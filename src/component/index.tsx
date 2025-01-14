@@ -1,5 +1,5 @@
 export * from "./Card";
-export * from "./Carousel";
+export * from "./Carousels";
 export * as B from "./Button";
 export * from "./Header";
 export * from "./Info";
