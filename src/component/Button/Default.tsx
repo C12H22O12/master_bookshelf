@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-interface ButtonProps {
+interface DefaultButtonProps {
   text: string;
 }
 
-export const Button = ({ text }: ButtonProps) => {
+const Default = ({ text }: DefaultButtonProps) => {
   return (
     <button className="flex items-center justify-between md:justify-center w-m-button md:w-p-button h-button rounded-xl bg-point text-button overflow-hidden hover:bg-hover">
       <Image
@@ -25,3 +25,5 @@ export const Button = ({ text }: ButtonProps) => {
     </button>
   );
 };
+
+export default Default
