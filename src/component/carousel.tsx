@@ -55,6 +55,7 @@ export const Carousel = (): JSX.Element => {
         >
           <DefaultCard
             isVisible={visiable.includes(idx)}
+            imgSrc={"/sample.png"}
             name={`${idx + 1} card`}
           />
         </div>

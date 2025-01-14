@@ -11,11 +11,13 @@ const config: Config = {
     extend: {
       width: {
         "max-card": "267px",
+        "max-img": "220px",
         "m-button": "283px",
         "p-button": "253px",
       },
       height: {
         "max-card": "620px",
+        "max-img": "520px",
         button: "43px",
       },
       backgroundColor: {
