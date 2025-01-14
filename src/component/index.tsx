@@ -1,3 +1,4 @@
 export * from "./Card";
 export * from "./Carousel";
-export * from "./Button";
+export * as B from "./Button";
+export * from "./Header";

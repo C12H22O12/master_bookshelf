@@ -1,1 +1,5 @@
-export * as Button from "./DefaultButton";
+import Default from "./Default";
+
+export const B = {
+  Default: Default,
+} as const;
