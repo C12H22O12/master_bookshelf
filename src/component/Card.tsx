@@ -1,16 +1,16 @@
 import Image from "next/image";
 
-interface DefaultCardProps {
+interface CardProps {
   isVisible: boolean;
   imgSrc: string;
   name: string;
 }
 
-export const DefaultCard = ({
+export const Card = ({
   isVisible,
   imgSrc,
   name,
-}: DefaultCardProps): JSX.Element => {
+}: CardProps): JSX.Element => {
   return (
     <div
       className={`flex flex-col items-center w-auto h-full aspect-[267/620] transition-all cursor-pointer ${
