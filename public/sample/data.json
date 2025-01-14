@@ -1,9 +1,9 @@
 [
-  { "id": 1, "title": "(홍길동) 책가도", "imgSrc": "/sample/1.png" },
-  { "id": 2, "title": "(허균) 책가도", "imgSrc": "/sample/2.jpg" },
-  { "id": 3, "title": "(허난설헌) 책가도", "imgSrc": "/sample/3.jpg" },
-  { "id": 4, "title": "(박지원) 책가도", "imgSrc": "/sample/4.jpg" },
-  { "id": 5, "title": "(박씨) 책가도", "imgSrc": "/sample/5.jpg" },
-  { "id": 6, "title": "(송악필) 책가도", "imgSrc": "/sample/1.png" },
-  { "id": 7, "title": "(권필) 책가도", "imgSrc": "/sample/2.jpg" }
+  { "id": 1, "title": "홍길동", "imgSrc": "/sample/1.png" },
+  { "id": 2, "title": "허균", "imgSrc": "/sample/2.jpg" },
+  { "id": 3, "title": "허난설헌", "imgSrc": "/sample/3.jpg" },
+  { "id": 4, "title": "박지원", "imgSrc": "/sample/4.jpg" },
+  { "id": 5, "title": "박씨", "imgSrc": "/sample/5.jpg" },
+  { "id": 6, "title": "송악필", "imgSrc": "/sample/1.png" },
+  { "id": 7, "title": "권필", "imgSrc": "/sample/2.jpg" }
 ]

@@ -1,13 +1,11 @@
 "use client";
 
 import { Carousel } from "@/component";
-import { Footer } from "@/component/footer";
 
 export default function Home() {
   return (
-    <div className="w-dvw">
+    <div className="w-dvw h-dvh">
       <Carousel />
-      <Footer />
     </div>
   );
 }
