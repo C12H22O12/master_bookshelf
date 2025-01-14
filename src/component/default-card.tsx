@@ -13,7 +13,7 @@ export const DefaultCard = ({
 }: DefaultCardProps): JSX.Element => {
   return (
     <div
-      className={`flex flex-col items-center w-max-card h-max-card transition-all ${
+      className={`flex flex-col items-center w-max-card h-max-card transition-all cursor-pointer ${
         isVisible ? "opacity-100" : "opacity-20"
       }`}
     >
