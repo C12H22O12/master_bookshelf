@@ -10,7 +10,7 @@ const Header = () => {
         height={43}
         className="w-auto h-full"
       />
-      <div className="py-2 px-3 md:mx-7 text-2xl border-x-8 border-y-4 border-frame rounded-md bg-default shadow-inner">
+      <div className="py-2 max-md:py-1 px-3 md:mx-7 text-2xl border-x-8 border-y-4 border-frame rounded-md bg-default shadow-inner">
         장인의 책가도
       </div>
       <Image

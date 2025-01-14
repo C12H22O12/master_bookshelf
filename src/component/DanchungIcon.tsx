@@ -1,12 +1,16 @@
 import Image from "next/image";
 
-const DanchungIcon = () => {
+interface DanchungProps {
+  size?: number;
+}
+
+const DanchungIcon = ({ size = 25 }: DanchungProps) => {
   return (
     <Image
       src={"/danchung_mini.svg"}
       alt="단청 미니 아이콘"
-      width={25}
-      height={27}
+      width={size}
+      height={size + 2}
     />
   );
 };

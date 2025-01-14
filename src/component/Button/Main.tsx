@@ -4,16 +4,18 @@ import { SHELFS } from "@/constant/data";
 
 const Main = () => {
   const router = useParams();
+
   const download = () => {
-    const { artist, imgSrc } = SHELFS[Number(router.id) + 1];
+    const { artist, imgSrc } = SHELFS[Number(router.id)];
     let a = document.createElement("a");
     a.href = imgSrc;
     a.download = `${artist}_책가도`;
     a.click();
     a.remove();
   };
+
   const moveTo = () => {
-    window.open(SHELFS[Number(router.id) + 1].url);
+    window.open(SHELFS[Number(router.id)].url);
   };
 
   return (

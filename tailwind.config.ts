@@ -16,7 +16,7 @@ const config: Config = {
       },
       height: {
         button: "43px",
-        header: "68px",
+        header: "60px",
       },
       backgroundColor: {
         default: "var(--background)",
