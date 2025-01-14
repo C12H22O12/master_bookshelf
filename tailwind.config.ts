@@ -15,12 +15,16 @@ const config: Config = {
       },
       height: {
         button: "43px",
+        header: "68px"
       },
       backgroundColor: {
         default: "var(--background)",
         board: "var(--boardbg)",
         point: "var(--point)",
         hover: "var(--hover)",
+      },
+      borderColor: {
+        frame: "var(--frame)",
       },
       textColor: {
         title: "var(--title)",
