@@ -1,9 +1,9 @@
 [
-  { "id": 1, "title": "홍길동", "imgSrc": "/sample/1.png" },
-  { "id": 2, "title": "허균", "imgSrc": "/sample/2.jpg" },
-  { "id": 3, "title": "허난설헌", "imgSrc": "/sample/3.jpg" },
-  { "id": 4, "title": "박지원", "imgSrc": "/sample/4.jpg" },
-  { "id": 5, "title": "박씨", "imgSrc": "/sample/5.jpg" },
-  { "id": 6, "title": "송악필", "imgSrc": "/sample/1.png" },
-  { "id": 7, "title": "권필", "imgSrc": "/sample/2.jpg" }
+  { "id": 1, "artist": "홍길동", "imgSrc": "/sample/1.png", "url":"https://www.google.com/search?q=홍길동" },
+  { "id": 2, "artist": "허균", "imgSrc": "/sample/2.jpg", "url":"https://www.google.com/search?q=허균" },
+  { "id": 3, "artist": "허난설헌", "imgSrc": "/sample/3.jpg", "url":"https://www.google.com/search?q=허난설헌" },
+  { "id": 4, "artist": "박지원", "imgSrc": "/sample/4.jpg", "url":"https://www.google.com/search?q=박지원" },
+  { "id": 5, "artist": "박씨", "imgSrc": "/sample/5.jpg", "url":"https://www.google.com/search?q=박씨" },
+  { "id": 6, "artist": "송악필", "imgSrc": "/sample/1.png", "url":"https://www.google.com/search?q=송악필" },
+  { "id": 7, "artist": "권필", "imgSrc": "/sample/2.jpg", "url":"https://www.google.com/search?q=권필" }
 ]
