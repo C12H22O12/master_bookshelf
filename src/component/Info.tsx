@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const Footer = () => {
+const Info = () => {
   return (
-    <div className="absolute bottom-6 right-6 w-100">
+    <div className="flex-initial w-100 mt-3 m-6 pt-3 border-t max-sm:hidden">
       <div className="flex flex-col items-end gap-2 w-100">
         <div className="flex gap-2">
           <Moving href="www.intagram.com/" name="instagram" />
@@ -19,7 +19,7 @@ const Footer = () => {
   );
 };
 
-export default Footer
+export default Info;
 
 interface MovingProps {
   href: string;

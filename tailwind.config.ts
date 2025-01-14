@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import scrollbarHide from "tailwind-scrollbar-hide";
 
 const config: Config = {
   content: [
@@ -15,7 +16,7 @@ const config: Config = {
       },
       height: {
         button: "43px",
-        header: "68px"
+        header: "60px",
       },
       backgroundColor: {
         default: "var(--background)",
@@ -34,6 +35,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [scrollbarHide],
 };
 export default config;

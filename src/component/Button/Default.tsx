@@ -2,11 +2,15 @@ import Image from "next/image";
 
 interface DefaultButtonProps {
   text: string;
+  handler: () => void;
 }
 
-const Default = ({ text }: DefaultButtonProps) => {
+const Default = ({ text, handler }: DefaultButtonProps) => {
   return (
-    <button className="flex items-center justify-between md:justify-center w-m-button md:w-p-button h-button rounded-xl bg-point text-button overflow-hidden hover:bg-hover">
+    <button
+      onClick={handler}
+      className="flex items-center justify-between md:justify-center w-m-button md:w-p-button h-button rounded-xl bg-point text-button overflow-hidden hover:bg-hover"
+    >
       <Image
         src="/danchung.png"
         alt="단청 이미지"
@@ -26,4 +30,4 @@ const Default = ({ text }: DefaultButtonProps) => {
   );
 };
 
-export default Default
+export default Default;
