@@ -10,7 +10,7 @@ export default function Home() {
       <div className="flex items-center flex-initial w-full h-1/6 ">
         <Header />
       </div>
-      <div className="flex-initial w-dvw h-4/5 py-4 overflow-scroll scrollbar-hide">
+      <div className="flex-initial w-dvw h-5/6 py-4 overflow-scroll scrollbar-hide">
         <Carousel />
       </div>
       <Info />
