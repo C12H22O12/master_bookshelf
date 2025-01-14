@@ -7,7 +7,7 @@ const Main = () => {
 
   const download = () => {
     const { artist, imgSrc } = SHELFS[Number(router.id)];
-    let a = document.createElement("a");
+    const a = document.createElement("a");
     a.href = imgSrc;
     a.download = `${artist}_책가도`;
     a.click();
