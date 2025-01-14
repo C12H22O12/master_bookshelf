@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { DefaultCard } from "./default-card";
+import data from "/public/sample/data.json";
+
+type CardInfo = { id: number; title: string; imgSrc: string };
 
 export const Carousel = (): JSX.Element => {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -42,20 +45,22 @@ export const Carousel = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="w-full flex gap-4 overflow-auto">
-      {Array.from(Array(8), (_, idx) => (
+    <div className="w-fit h-4/5 flex gap-1 overflow-auto">
+      {(data as CardInfo[]).map((d: CardInfo, idx: number) => (
         <div
-          key={`default_card_carousel_${idx}`}
+          key={d.id}
           ref={(el) => {
             cardRefs.current[idx] = el;
           }}
           data-index={idx}
           onClick={() => handleCardClick(idx)}
-          className="w-fit"
+          className="w-fit h-full "
         >
-          <DefaultCard isVisible={visiable.includes(idx)}>
-            {idx + 1} card
-          </DefaultCard>
+          <DefaultCard
+            isVisible={visiable.includes(idx)}
+            imgSrc={d.imgSrc}
+            name={d.title}
+          />
         </div>
       ))}
     </div>

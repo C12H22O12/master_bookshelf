@@ -1,20 +1,40 @@
-import { PropsWithChildren } from "react";
+import Image from "next/image";
 
-interface DefaultCardProps extends PropsWithChildren {
+interface DefaultCardProps {
   isVisible: boolean;
+  imgSrc: string;
+  name: string;
 }
 
 export const DefaultCard = ({
   isVisible,
-  children,
+  imgSrc,
+  name,
 }: DefaultCardProps): JSX.Element => {
   return (
     <div
-      className={`p-4 w-4/5dvw h-4/5dvh rounded-xl flex items-center space-x-4 border  transition-all ${
-        isVisible ? "bg-green-500" : "bg-red-500"
+      className={`flex flex-col items-center w-auto h-full aspect-[267/620] transition-all cursor-pointer ${
+        isVisible ? "opacity-100" : "opacity-20"
       }`}
     >
-      {children}
+      <div className="relative w-full overflow-hidden flex justify-center items-center">
+        <Image
+          src={"/frame.png"}
+          width={267}
+          height={620}
+          alt="책가도 틀"
+          className="relative z-10 w-full"
+        />
+        <div
+          className="absolute z-0 w-5/6 h-auto aspect-[267/620] bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${imgSrc})`,
+          }}
+        />
+      </div>
+      <div className="text-center">
+        {name} <br className="max-md:hidden" /> 책가도
+      </div>
     </div>
   );
 };

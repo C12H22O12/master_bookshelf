@@ -10,12 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       width: {
-        "4/5dvw": "40dvw",
         "m-button": "283px",
         "p-button": "253px",
       },
       height: {
-        "4/5dvh": "80dvh",
         button: "43px",
       },
       backgroundColor: {

@@ -1,13 +1,11 @@
 "use client";
 
-import { Button } from "@/component";
-import { Footer } from "@/component/footer";
+import { Carousel } from "@/component";
 
 export default function Home() {
   return (
-    <div className="w-dvw">
-      <Button text="테스트용 버튼" />
-      <Footer />
+    <div className="w-dvw h-dvh">
+      <Carousel />
     </div>
   );
 }
