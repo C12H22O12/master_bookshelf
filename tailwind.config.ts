@@ -33,6 +33,9 @@ const config: Config = {
         button: "var(--button)",
         board: "var(--boardct)",
       },
+      fontFamily: {
+        "title": "var(--font-title-otf)",
+      },
     },
   },
   plugins: [scrollbarHide],
