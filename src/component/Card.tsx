@@ -2,21 +2,23 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 interface CardProps {
-  idx: number;
-  isVisible: boolean;
   imgSrc: string;
-  name: string;
+  idx?: number;
+  isVisible?: boolean;
+  name?: string;
 }
 
 export const Card = ({
   idx,
-  isVisible,
   imgSrc,
+  isVisible = true,
   name,
 }: CardProps): JSX.Element => {
   const router = useRouter();
   const moveTo = () => {
-    router.push(`/${idx}`);
+    if (typeof idx === "number") {
+      router.push(`/${idx}`);
+    }
   };
 
   return (
@@ -41,7 +43,7 @@ export const Card = ({
           }}
         />
       </div>
-      <div className="pt-2 text-center">{name} 책가도</div>
+      {name && <div className="pt-2 text-center">{name} 책가도</div>}
     </div>
   );
 };
