@@ -10,7 +10,7 @@ const DanchungIcon = ({ size = 25 }: DanchungProps) => {
       src={"/danchung_mini.svg"}
       alt="단청 미니 아이콘"
       width={size}
-      height={size + 2}
+      height={size}
     />
   );
 };

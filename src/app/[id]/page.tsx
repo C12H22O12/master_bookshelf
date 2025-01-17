@@ -16,10 +16,10 @@ export default function Detail() {
         <div className="flex flex-col items-center flex-initial w-full h-1/6 pt-2 max-md:hidden">
           <Header />
         </div>
-        <div className="w-full my-6 flex-initial h-5/6 p-8">
+        <div className="w-full my-6 flex-initial h-5/6 p-8 ">
           <div className="flex justify-center items-center gap-5 mb-8">
             <DanchungIcon size={40} />
-            <div className="text-4xl">
+            <div className="relative bottom-1 text-4xl ">
               {SHELFS[Number(router.id)].artist} 책가도
             </div>
             <DanchungIcon size={40} />
