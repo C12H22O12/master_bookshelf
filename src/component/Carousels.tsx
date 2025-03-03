@@ -91,7 +91,7 @@ const Carousel = (): JSX.Element => {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-full px-8 flex gap-1 snap-mandatory snap-x overflow-auto"
+      className="relative w-full h-full px-8 flex gap-1 snap-mandatory snap-x overflow-auto scrollbar-hide"
       style={{ paddingInline: `${sidePadding}px` }}
     >
       {SHELFS.map((d: CardInfo, idx: number) => (
