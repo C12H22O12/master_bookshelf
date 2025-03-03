@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 interface CardProps {
   imgSrc: string;
@@ -15,15 +16,37 @@ export const Card = ({
   name,
 }: CardProps): JSX.Element => {
   const router = useRouter();
+  const [touchStartY, setTouchStartY] = useState<number | null>(null);
+
   const moveTo = () => {
     if (typeof idx === "number") {
       router.push(`/${idx}`);
     }
   };
 
+  const handleClick = () => {
+    return window.innerWidth >= 768 ? moveTo() : null;
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartY(e.touches[0].clientY);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartY !== null) {
+      const touchEndY = e.changedTouches[0].clientY;
+      if (touchEndY - touchStartY > 50) {
+        moveTo();
+      }
+    }
+    setTouchStartY(null);
+  };
+
   return (
     <div
-      onClick={moveTo}
+      onClick={handleClick}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
       className={`flex flex-col items-center w-auto h-full aspect-[267/620] transition-all cursor-pointer ${
         isVisible ? "opacity-100" : "opacity-20"
       }`}
