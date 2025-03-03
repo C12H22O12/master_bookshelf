@@ -1,4 +1,4 @@
-import { MOBILE_WIDTH } from "@/constant/layout";
+import useIsMobile from "@/hook/useIsMobile";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -18,6 +18,7 @@ export const Card = ({
 }: CardProps): JSX.Element => {
   const router = useRouter();
   const [touchStartY, setTouchStartY] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   const moveTo = () => {
     if (typeof idx === "number") {
@@ -26,7 +27,7 @@ export const Card = ({
   };
 
   const handleClick = () => {
-    return window.innerWidth >= MOBILE_WIDTH ? moveTo() : null;
+    return isMobile ? moveTo() : null;
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {

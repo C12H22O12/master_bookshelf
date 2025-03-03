@@ -8,7 +8,7 @@ import {
 import { Card } from "./Card";
 import { CardInfo, SHELFS } from "@/constant/data";
 import { Contact } from "./Contact";
-import { MOBILE_WIDTH } from "@/constant/layout";
+import useIsMobile from "@/hook/useIsMobile";
 
 const CardWrapper = ({
   children,
@@ -45,6 +45,7 @@ const Carousel = (): JSX.Element => {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [visible, setVisible] = useState<number[]>([]);
   const [sidePadding, setSidePadding] = useState<number>(0);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // 화면 정 중앙에 처음/끝 컴포넌트 오기 위한 padding 값 계산
@@ -106,7 +107,7 @@ const Carousel = (): JSX.Element => {
       ))}
 
       {/* Contact 컴포넌트도 감지 대상에 추가 */}
-      {window.innerWidth < MOBILE_WIDTH && (
+      {isMobile && (
         <CardWrapper index={SHELFS.length} cardRefs={cardRefs}>
           <Contact />
         </CardWrapper>
