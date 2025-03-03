@@ -1,3 +1,4 @@
+import { MOBILE_WIDTH } from "@/constant/layout";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -25,7 +26,7 @@ export const Card = ({
   };
 
   const handleClick = () => {
-    return window.innerWidth >= 768 ? moveTo() : null;
+    return window.innerWidth >= MOBILE_WIDTH ? moveTo() : null;
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
