@@ -4,19 +4,33 @@ import { SAMPLE_TEXT, SHELFS } from "@/constant/data";
 import { Card } from "../Card";
 import { useParams } from "next/navigation";
 
+const ImageBlock = ({ src }: { src: string }) => (
+  <div className="w-full max-w-[120px] mx-auto">
+    <Card imgSrc={src} />
+  </div>
+);
+
+const TextBlock = ({ text }: { text: string }) => (
+  <div className="text-justify leading-relaxed">{text}</div>
+);
+
+const ContentLayout = ({ imgSrc, text }: { imgSrc: string; text: string }) => (
+  <div className="grid grid-cols-1 sm:grid-cols-[120px_auto] gap-3 w-full">
+    <ImageBlock src={imgSrc} />
+    <TextBlock text={text} />
+  </div>
+);
+
 const LayoutMobile = () => {
   const router = useParams();
+  const imgSrc = SHELFS[Number(router.id)].imgSrc;
 
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full">
         <DanchungIcon />
-
-        <div className="flex items-start justify-center gap-3 w-full my-6">
-          <div className="w-full min-w-[116px]">
-            <Card imgSrc={SHELFS[Number(router.id)].imgSrc} />
-          </div>
-          <div>{SAMPLE_TEXT}</div>
+        <div className="w-full my-6">
+          <ContentLayout imgSrc={imgSrc} text={SAMPLE_TEXT} />
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full">

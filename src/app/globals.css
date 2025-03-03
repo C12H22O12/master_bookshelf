@@ -14,10 +14,30 @@
   --frame: #694731;
 }
 
+@font-face {
+  font-family: "GowunBatang-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ChungjuKimSaengTTF";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/ChungjuKimSaengTTF.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   color: var(--content);
   background: var(--background);
-  font-family: var(--font-content-batang);
+  font-family: "GowunBatang-Regular";
+}
+
+.titleFont {
+  font-family: "ChungjuKimSaengTTF";
 }
 
 @layer utilities {
