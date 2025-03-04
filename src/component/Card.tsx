@@ -27,7 +27,7 @@ export const Card = ({
   };
 
   const handleClick = () => {
-    return isMobile ? moveTo() : null;
+    return isMobile ? null : moveTo();
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
