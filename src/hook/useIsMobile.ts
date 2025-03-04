@@ -13,7 +13,7 @@ const useIsMobile = () => {
     return () => window.removeEventListener("resize", handleInner);
   }, []);
 
-  return inner < MOBILE_WIDTH;
+  return inner > 0 && inner < MOBILE_WIDTH;
 };
 
 export default useIsMobile;
